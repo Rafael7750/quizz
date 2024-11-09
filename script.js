@@ -74,13 +74,15 @@ function startQuiz() {
 }
 
 function showQuestion() {
-  const questionElement = document.getElementById("question");
-  const answerButtons = document.getElementById("answer-buttons");
-  answerButtons.innerHTML = "";
-
+  const quizContainer = document.getElementById("quiz-container");
   const question = questions[currentQuestionIndex];
-  questionElement.textContent = question.question;
 
+  quizContainer.innerHTML = `
+    <h2>${question.question}</h2>
+    <div id="answer-buttons"></div>
+  `;
+
+  const answerButtons = document.getElementById("answer-buttons");
   question.answers.forEach(answer => {
     const button = document.createElement("button");
     button.textContent = answer.text;
@@ -158,5 +160,5 @@ function showLeaderboard() {
   `;
 }
 
-// Inicia o quiz exibindo a tela inicial
+// Exibe a tela inicial ao carregar a página
 showHomeScreen();
