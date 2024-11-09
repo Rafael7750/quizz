@@ -66,7 +66,7 @@ let score = 0;
 function showHomeScreen() {
   const quizContainer = document.getElementById("quiz-container");
   quizContainer.innerHTML = `
-    <h1>Bem-vindo ao Quiz!</h1>
+    <h1>Bem-vindo ao Quiz de Biotécnologia!</h1>
     <button onclick="startQuiz()">Começar</button>
     <button onclick="showLeaderboard()">Classificação</button>
   `;
