@@ -1,3 +1,8 @@
+document.addEventListener("DOMContentLoaded", () => {
+  showHomeScreen();
+});
+
+
 const questions = [
     {
       question: "O que é biotecnologia?",
@@ -159,6 +164,3 @@ function showLeaderboard() {
     <button onclick="showHomeScreen()">Voltar à Página Inicial</button>
   `;
 }
-
-// Exibe a tela inicial ao carregar a página
-showHomeScreen();
